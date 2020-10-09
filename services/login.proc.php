@@ -13,8 +13,8 @@
         if (mysqli_num_rows($result)==1) {
             $row = mysqli_fetch_array($result);
             session_start();
-            $SESSION['email']=$row['email'];
-            $SESSION['id']=$row['id_user'];
+            $_SESSION['email']=$row['email'];
+            $_SESSION['id']=$row['id_user'];
             header('location:../view/home.php');
         }else {
             header('location:../index.php');
